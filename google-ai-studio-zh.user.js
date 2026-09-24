@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google AI Studio 汉化脚本(船仓完美版)
 // @namespace    https://github.com/izscc
-// @version      3.7.6
+// @version      3.7.7
 // @description  对 Google AI Studio 网站界面进行完美汉化，方便中国用户使用。已补齐 FAQ、付费 API key 关联弹层、模型选择器、历史对话操作区及更多新版 UI 的漏翻内容。
 // @author       zscc.in
 // @match        https://aistudio.google.com/*
@@ -10,8 +10,6 @@
 // @license      MIT
 // @homepageURL  https://github.com/izscc/AIstudio-zh
 // @supportURL   https://github.com/izscc/AIstudio-zh/issues
-// @downloadURL https://update.greasyfork.org/scripts/556804/Google%20AI%20Studio%20%E6%B1%89%E5%8C%96%E8%84%9A%E6%9C%AC%28%E8%88%B9%E4%BB%93%E5%AE%8C%E7%BE%8E%E7%89%88%29.user.js
-// @updateURL https://update.greasyfork.org/scripts/556804/Google%20AI%20Studio%20%E6%B1%89%E5%8C%96%E8%84%9A%E6%9C%AC%28%E8%88%B9%E4%BB%93%E5%AE%8C%E7%BE%8E%E7%89%88%29.meta.js
 // ==/UserScript==
 
 (function () {
@@ -26,9 +24,154 @@
     // 翻译映射表 (英文 -> 中文)
     const translations = {
         // --- 应用界面新增 ---
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "": "",
+        "Google Calendar": "Google 日历",
+        "Nano Banana 2 Lite and Gemini Omni Flash": "Nano Banana 2 Lite 与 Gemini Omni Flash",
+        "Create with Gemini Flash": "使用 Gemini Flash 进行创作",
+        "Search across hundreds of apps created using Gemini models on AI Studio...": "搜索由 Gemini 模型构建的数百款应用……",
+        "Build live multilingual experiences where global audiences stream audio in their own language instantly.": "打造实时多语言体验，让全球受众能够即时以母语收听音频流。",
+        "Gemini 3.5 Live Translate Preview is now available": "Gemini 3.5 实时翻译预览功能现已推出",
+        "Experience our fastest image generation model yet, engineered to deliver high-quality visuals at rapid speed and scale.": "体验我们迄今为止速度最快的图像生成模型，它专为实现高速、大规模的高质量视觉内容生成而打造。",
+        "Bring ideas to life quickly with Gemini 3.1 Flash Lite Image": "利用 Gemini 3.1 Flash Lite Image 快速将创意变为现实",
+        "Create next-generation video with Gemini Omni Flash. Bring text and images to life as stunning video, with conversational editing for complete, easy-to-steer creative control.": "利用 Gemini Omni Flash 创作新一代视频。将文本和图像转化为令人惊叹的视频，并通过对话式编辑功能，实现全面且易于掌控的创作控制。",
+        "Create video with Gemini Omni Flash": "使用 Gemini Omni Flash 制作视频",
+        "Our fastest, most cost-effective 3.5 model for high-throughput execution is now available.": "我们用于高吞吐量执行、速度最快且最具成本效益的 3.5 模型现已推出。",
+        "Gemini 3.5 Flash Lite is now available": "Gemini 3.5 Flash Lite 现已推出",
+        "You don't have any prompts yet.": "你还没有任何提示词。",
+        "Shared": "共享",
+        "My files": "我的文件",
+        "Share Audio From Tab": "共享标签页音频",
+        "Try the Live API": "试用实时 API",
+        "Echo target language": "回声目标语言",
+        "Target language": "目标语言",
+        "Chinese (Traditional)": "繁体中文",
+        "Chinese (Simplified)": "简体中文",
+        "Our ultra-low latency, real-time streaming speech-to-text model. Engineered to transcribe live audio inputs on-the-fly with rapid-fire textual updates.": "这是我们超低延迟的实时流式语音转文字模型，专为即时转录实时音频输入并快速输出文本更新而设计。",
+        "Gemini 3.5 Transcribe Live is now available": "Gemini 3.5 实时转录功能现已推出",
+        "Production-ready generative video with keyframe control and scene extension. Bring text, image, and video references to life, seamlessly extend scenes up to 30 seconds, and upscale outputs up to 4K.": "支持关键帧控制与场景扩展，打造可直接用于生产的生成式视频。让文本、图像及视频参考素材焕发活力，无缝扩展场景时长至 30 秒，并将输出画质提升至 4K。",
+        "Gemini Omni 1.1 Flash is now available": "Gemini Omni 1.1 Flash 现已推出",
+        "Our next-generation Flash model, offering enhanced thinking capabilities, advanced multimodal reasoning, and high performance is now available.": "我们具备增强思维能力、先进多模态推理能力及高性能的下一代 Flash 模型现已推出。",
+        "Gemini 3.8 Flash is now available": "Gemini 3.8 Flash 现已推出",
+        "Our advanced, full-song generative model offering enhanced audio fidelity and vocal clarity, optimized for precise prompt adherence and rich musical arrangements.": "我们先进的整曲生成模型，具备更高的音频保真度和人声清晰度，并针对精准遵循提示词及丰富的音乐编排进行了优化。",
+        "Our high-precision audio model engineered for complex tasks, capable of in-depth reasoning while speaking with natural verbal cues.": "我们专为复杂任务打造的高精度音频模型，既能进行深度推理，又能以自然的口语化表达进行交流。",
+        "Lyria 3.5 is now available": "Lyria 3.5 现已发布",
+        "Our high-precision audio model engineered for complex tasks, capable of in-depth reasoning while speaking with natural verbal cues.": "我们专为复杂任务打造的高精度音频模型，既能进行深度推理，又能以自然的口语化表达进行交流。",
+        "Gemini 3.8 Live Extended Thinking is now available": "Gemini 3.8 Live 扩展思考功能现已推出",
+        "Prompt custom voices from scratch, direct two-speaker dialogue, and trigger natural vocal bursts.": "从零开始生成定制语音，引导双人对话，并触发自然的语音爆发。",
+        "Introducing Gemini 3.8 Flash TTS": "隆重推出 Gemini 3.8 Flash TTS",
+        "Our previous generation Flash model, balancing speed and multimodal capabilities across general agentic and everyday tasks.": "我们上一代 Flash 模型，在通用智能体任务与日常任务中兼顾了速度与多模态能力。",
+        "Our high-speed, efficient Flash model built for everyday coding, agentic tool use, and reliable multi-step execution.": "我们高速、高效的 Flash 模型，专为日常编码、智能体工具使用及可靠的多步骤任务执行而打造。",
+        "We are experiencing issues with apps in AI Studio Build. Users may see errors or timeouts when attempting to create, open, run, or deploy applications. Investigation is underway.": "AI Studio Build 中的应用目前出现问题。用户在尝试创建、打开、运行或部署应用时，可能会遇到错误或超时情况。相关排查工作正在进行中。",
+        "Issues with apps in AI Studio Build.": "AI Studio Build 中的应用问题",
+        "Issues with Nano Banana": "Nano Banana 相关问题",
+        "Issues with Gemini API context caching": "Gemini API 上下文缓存相关问题",
+        "We are experiencing issues with the Billing page in AI Studio. Users may see errors when viewing or managing payment details. Investigation is underway.": "AI Studio 的“账单”页面目前出现问题。用户在查看或管理支付信息时可能会遇到错误。相关排查工作正在进行中。",
+        "Issue has been resolved.": "问题已解决",
+        "Issues with apps in AI Studio Build": "AI Studio Build 中的应用相关问题",
+        "Detected": "检测到",
+        "Resolved": "已解决",
+        "Issues with AI Studio Billing and payment settings": "AI Studio 账单与付款设置相关问题",
+        "Related": "相关",
+        "Gemini API Batch requests not finishing in 24 hours": "Gemini API 批量请求在 24 小时内未完成",
+        "Partial outage": "部分中断",
+        "No issues recorded on this day": "当天未记录到任何问题",
+        "Today": "今天",
+        "Past Incidents": "过往事件",
+        "Multimodal Live API": "多模态实时 API",
+        "90 days": "90天",
+        "Free Tier (SHEDDABLE)": "免费层级（可拆卸）",
+        "Billed / Paid Tier (CRITICAL)": "已计费/已付款层级（关键）",
+        "All Tiers": "所有等级",
+        "All Systems Operational": "所有系统运行正常",
+        "Filter status by traffic tier. Free-tier requests use sheddable capacity, while billed-tier requests are protected by critical priority.": "按流量等级筛选状态。免费等级的请求使用可分配容量，而计费等级的请求则受到关键优先级的保护",
+        "Priority / Tier Visibility": "优先级/层级可见性",
+        "Google AI Studio and the Gemini API Status": "Google AI Studio 和 Gemini API 的状态",
+        "View AI Studio and Gemini status": "系统状态",
+        "Something went wrong, please refresh and try again in a few minutes": "出错了，请刷新页面并在几分钟后重试",
+        "Continue with a Google AI plan": "继续订阅 Google AI 套餐",
+        "Access a range of models in AI Studio, higher limits, and more across Google products": "在 AI Studio 中访问各种模型、更高的限制以及 Google 产品中的更多功能",
+        "Monthly subscription": "月度订阅",
+        "Additional Google AI benefits": "谷歌人工智能的其他优势",
+        "Access to all models & agents": "可接触所有模型和智能体",
+        "Higher limits": "更高限制",
+        "Experiment with Gemini API models and features directly in the UI.": "直接在用户界面中体验 Gemini API 模型和功能",
+        "Pay per request": "按请求付费",
+        "Continue with pay per request": "继续按请求付费",
+        "A real-time speech-to-speech translation model delivering low latency translation for 70+ languages.": "一款实时语音对语音翻译模型，可为 70 多种语言提供低延迟翻译",
+        "Our fastest, most cost-effective 3.5 model for high-throughput execution.": "我们速度最快、最具成本效益的 3.5 模型，适用于高吞吐量执行任务",
+        "See model card": "查看模型卡",
+        "Knowledge cut off:": "知识截止日期：",
+        "Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.": "我们最智能的 Flash 模型，专为长周期软件工程、自主智能体及复杂的企业级工作流程而打造",
+        "Receive browser notifications when Build operations complete.": "在 Google AI Studio 完成工作时弹出浏览器通知",
+        "Toggle predictive text suggestions.": "切换预测文本建议",
+        "Choose the keyboard shortcut for running a prompt.": "选择提交提示词的键盘快捷键",
+        "Adjust the visual appearance.": "调整视觉效果",
+        "User Settings": "用户设置",
+        "User settings": "用户设置",
+        "Loading your apps.": "正在加载你的应用程序...",
+        "Other products": "其他产品",
+        "No apps yet. As you build and view apps, they'll appear here.": "目前还没有应用。您创建和查看应用后，它们将显示在此处。",
+        "Google Drive": "Google 云端硬盘",
+        "Enabled": "开启",
+        "Disabled": "关闭",
+        "Upgrade to unlock more": "升级以解锁更多内容",
+        "Access higher limits, Pro models, and more.": "获取更高额度、专业版模型及更多功能。",
+        "Account status": "账号状态",
+        "My apps": "我的应用",
+        "Recent": "最近",
+        "Explore": "探索",
+        "Manage": "管理",
+        "Prohibited content": "内容不合规",
         "Continue to the app": "继续前往应用",
         "Jump back in": "重新载入",
-        "Try in Playground": "在实验室中尝试",
+        "Try in Playground": "在新聊天中尝试",
         "Explore Gemini models": "探索 Gemini 模型",
         "Start building": "开始创作",
         "Vibe code an app": "用 Vibe 编写一个应用",
@@ -469,7 +612,7 @@
         "Immersive Games & 3D Worlds": "沉浸式游戏与3D世界",
         "Infographics": "信息图表",
         "Studio-quality image generation & editing": "工作室级图像生成与编辑",
-        "Beautiful landing pages": "精美的着陆页",
+        "Beautiful landing pages": "精美的网站页面",
         "One Shot": "一镜到底",
         "Design and Typography": "设计和排版",
         "Character consistency": "角色一致性",
@@ -657,7 +800,7 @@
         "Home": "主页",
         "Saved to Drive": "已保存到云端硬盘",
         "View all history": "查看所有历史",
-        "Playground": "AI 实验室",
+        "Playground": "新聊天",
         "Vibe code": "氛围编程",
         "Chat with models": "与模型对话",
         "Monitor usage": "监控用量",
@@ -821,7 +964,7 @@
         "New chat": "新对话",
         "Stream": "流式传输",
         "Generate Media": "生成媒体",
-        "Build": "构建APP",
+        "Build": "开发",
         "Gemini API Spend": "Gemini API 费用",
         "Monthly spend cap": "每月费用上限",
         "Experimental": "实验性",
@@ -1540,9 +1683,9 @@
         "Enable Thinking for complex queries": "为复杂查询启用思考模式",
         "Convert text to natural-sounding speech": "将文本转换为自然语音",
         "Theme": "主题",
-        "Applet notifications": "Applet 通知",
-        "Light": "明亮",
-        "Dark": "暗黑",
+        "Applet notifications": "通知",
+        "Light": "浅色",
+        "Dark": "深色",
         "System": "跟随系统",
         "Submit prompt key": "提交提示词快捷键",
         "View status": "查看状态",
@@ -1770,7 +1913,7 @@
         // --- AI Studio 2026年6月新增 UI 元素汉化 ---
         "Products and apps": "产品和应用",
 
-        // AI 实验室 - 使用代理构建卡片
+        // 新聊天 - 使用代理构建卡片
         "Antigravity Preview": "Antigravity 预览版",
         "A general-purpose autonomous agent running in a remote, Google-hosted Linux environment.": "在 Google 托管的远程 Linux 环境中运行的通用自主代理。",
         "AI Talk Radio": "AI 语音电台",
@@ -1841,6 +1984,31 @@
 
     Object.assign(translations, Object.fromEntries(longFormTranslations));
 
+    // 修复 Models / Agents 中文按钮宽度函数
+    function fixToggleWidth() {
+
+        const style = document.createElement("style");
+
+        style.textContent = `
+        ms-button-toggle .toggle-button {
+            min-width: 72px !important;
+            width: auto !important;
+            padding-left: 14px !important;
+            padding-right: 14px !important;
+        }
+
+        ms-button-toggle .toggle-label {
+            white-space: nowrap !important;
+            word-break: keep-all !important;
+        }
+    `;
+
+        document.head.appendChild(style);
+    }
+
+    // 执行修复 Models / Agents 中文按钮宽度函数
+    fixToggleWidth();
+
     function monthNameToNumber(month) {
         const monthMap = {
             jan: 1, january: 1, feb: 2, february: 2, mar: 3, march: 3, apr: 4, april: 4,
@@ -1871,10 +2039,11 @@
 
     // --- v3.7.1 巡检新增：AI Studio 2026-05 可见 UI / 弹层 / 账号区 ---
     Object.assign(translations, {
+        "Google Sheets": "Google 表格",
         "Apps": "应用",
-        "Build with Agents": "使用代理构建",
+        "Build with Agents": "使用智能体进行创作",
         "Models": "模型",
-        "Agents": "代理",
+        "Agents": "智能体",
         "Deep Research Preview (Apr-21-2026)": "深度研究预览版（2026年4月21日）",
         "Deep Research Max Preview (Apr-21-2026)": "深度研究 Max 预览版（2026年4月21日）",
         "Our agent for long-running context gathering & synthesis tasks, optimized for speed and efficiency.": "我们的长时上下文收集与综合任务代理，针对速度和效率进行了优化。",
@@ -2022,6 +2191,10 @@
     const regexReplacements = [
         // --- 修复价格显示汉化 (动态价格匹配) ---
         // 放在最前面以优先匹配整句话
+        {
+            regex: /^All context lengths ?(?:•|\*)? ?Input: (\$[0-9.]+) \/ Output: (\$[0-9.]+) through December 31, 2026$/i,
+            replacement: "所有上下文长度 • 输入: $1 / 输出: $2（截至 2026 年 12 月 31 日）"
+        },
         { regex: /^All context lengths ?• ?Input: (\$[0-9.]+) \/ Output: (\$[0-9.]+)$/i, replacement: "所有上下文长度 • 输入: $1 / 输出: $2" },
         { regex: /^Image \(\*Output per image\) ?• ?Input: (\$[0-9.]+) \/ Output: (\$[0-9.]+)$/i, replacement: "图像 (*每张图像输出) • 输入: $1 / 输出: $2" },
         { regex: /^Text ?• ?Input: (\$[0-9.]+) \/ Output: (\$[0-9.]+)$/i, replacement: "文本 • 输入: $1 / 输出: $2" },
@@ -2151,14 +2324,14 @@
                 .join(' ');
 
             if (words.length === 5 && (joinedText === 'Build your ideas with Gemini' || joinedText === '构建APP your ideas with Gemini')) {
-                const replacements = ['用 ', 'Gemini ', '将创意 ', '变成 ', 'APP'];
+                const replacements = ['用 ', 'Gemini ', '将创意 ', '变成 ', '应用程序'];
                 words.forEach((word, index) => {
                     word.textContent = replacements[index];
                     processedNodes.add(word);
                     if (word.firstChild) processedNodes.add(word.firstChild);
                 });
-                translationCache.set('Build your ideas with Gemini', '用 Gemini 将创意变成 APP');
-                translationCache.set('构建APP your ideas with Gemini', '用 Gemini 将创意变成 APP');
+                translationCache.set('Build your ideas with Gemini', '用 Gemini 将创意变成 应用程序');
+                translationCache.set('构建APP your ideas with Gemini', '用 Gemini 将创意变成 应用程序');
             }
         }
     }
@@ -2347,5 +2520,83 @@
     } else {
         setTimeout(init, 1000);
     }
+
+
+    // ================================
+    // Models / Agents 标题中文修复
+    // ================================
+
+    const titles = {
+        models: "探索 Google 模型",
+        agents: "使用智能体进行创作"
+    };
+
+
+    function changeCarouselTitle(type) {
+
+        const title = document.querySelector(
+            "h2.carousel-title"
+        );
+
+        if (!title) return;
+
+        title.textContent = titles[type];
+    }
+
+
+    function bindTitleButtons() {
+
+        const buttons = document.querySelectorAll(
+            'button[data-value]'
+        );
+
+
+        buttons.forEach(btn => {
+
+            if (btn.dataset.cnTitleBind) return;
+
+            btn.dataset.cnTitleBind = "true";
+
+
+            btn.addEventListener(
+                "click",
+                () => {
+
+                    const value = btn.dataset.value;
+
+
+                    if (value === "models") {
+                        changeCarouselTitle("models");
+                    }
+
+
+                    if (value === "agents") {
+                        changeCarouselTitle("agents");
+                    }
+
+                },
+                true
+            );
+
+        });
+
+    }
+
+
+    bindTitleButtons();
+
+
+    const titleObserver = new MutationObserver(() => {
+        bindTitleButtons();
+    });
+
+
+    titleObserver.observe(
+        document.body,
+        {
+            childList:true,
+            subtree:true
+        }
+    );
 
 })();
