@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google AI Studio 汉化脚本(船仓完美版)
 // @namespace    https://github.com/izscc
-// @version      3.7.7
+// @version      3.7.8
 // @description  对 Google AI Studio 网站界面进行完美汉化，方便中国用户使用。已补齐 FAQ、付费 API key 关联弹层、模型选择器、历史对话操作区及更多新版 UI 的漏翻内容。
 // @author       zscc.in
 // @match        https://aistudio.google.com/*
@@ -54,24 +54,22 @@
         "": "",
         "": "",
         "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
+        "Switching to this model will start a new chat. Content in current chat will be lost. Do you want to continue?": "切换模型后将开启新对话，当前对话内容将会丢失！！是否继续？",
+        "Switch model?": "切换模型？",
+        "Our legacy Flash model, providing baseline speed and intelligence.": "我们上一代的 Flash 模型，提供基础的速度与智能水平。",
+        "High-speed and cost-efficient, ideal for rapid dubbing, media localization, and high-throughput voice agents. Direct replacement for gemini-3.1-flash-tts-preview.": "高速且经济高效，是快速配音、媒体本地化及高吞吐量语音智能体应用的理想选择。可直接替代 gemini-3.1-flash-tts-preview。",
+        "Our advanced, full-song generative model with enhanced audio fidelity and vocal clarity, optimized for precise prompt adherence and rich, cohesive musical arrangements.": "我们先进的整曲生成模型，具备更高的音频保真度和人声清晰度，并针对精准遵循提示词及丰富、连贯的音乐编排进行了优化。",
+        "Gemini Robotics-ER 2 Preview": "Gemini Robotics-ER 2 预览版",
+        "Create new dialog": "创建新对话",
+        "Explore Text to speech": "探索文本转语音功能",
+        "Turn text into natural-sounding speech": "将文本转换为听起来自然的语音",
+        "Our advanced embodied reasoning model—designed to help robots reason about the physical world with unprecedented precision, plan complex tasks, and make logical decisions.": "我们先进的具身推理模型——旨在帮助机器人以空前的精度对物理世界进行推理、规划复杂任务并做出合乎逻辑的决策。",
+        "Upgrade to unlock Gemini Robotics ER 2": "升级后即可解锁 Gemini Robotics ER 2",
+        "Our earlier Flash model, built for speed and foundational performance across routine, high-throughput workloads.": "我们早期的 Flash 模型，专为应对常规高吞吐量工作负载所需的速度与基础性能而构建。",
+        "Our specialized, high-accuracy speech-to-text model optimized for processing pre-recorded files and static payloads. Engineered to deliver deep, structured transcripts with rich archival metadata.": "我们专用的高精度语音转文字模型，针对处理预录音频文件及静态数据负载进行了优化，旨在生成包含丰富归档元数据的深度结构化转录内容。",
+        "Continue to upgrade": "前往升级套餐",
+        "Nano Banana is only available in the Playground via a Google AI Plan or an API key. Upgrade to unlock access to more models, features and higher limits across AI Studio.": "Nano Banana 仅可通过 Google AI 方案或 API 密钥在 Playground 中使用。升级即可解锁更多模型与功能，并提高 AI Studio 中的各项使用限额。",
+        "Upgrade to unlock Nano Banana": "升级后即可解锁 Nano Banana",
         "Google Calendar": "Google 日历",
         "Nano Banana 2 Lite and Gemini Omni Flash": "Nano Banana 2 Lite 与 Gemini Omni Flash",
         "Create with Gemini Flash": "使用 Gemini Flash 进行创作",
@@ -2409,6 +2407,7 @@
 
             const originalText = node.nodeValue;
             const text = originalText.trim();
+            const normalizedText = text.replace(/\s+/g, ' ');
 
             if (!text) return;
 
@@ -2421,6 +2420,13 @@
                 const translated = translations[text];
                 node.nodeValue = originalText.replace(text, translated);
                 translationCache.set(text, translated);
+                return;
+            }
+
+            if (translations[normalizedText]) {
+                const translated = translations[normalizedText];
+                node.nodeValue = translated;
+                translationCache.set(normalizedText, translated);
                 return;
             }
 
