@@ -10,6 +10,8 @@
 // @license      MIT
 // @homepageURL  https://github.com/izscc/AIstudio-zh
 // @supportURL   https://github.com/izscc/AIstudio-zh/issues
+// @downloadURL https://update.greasyfork.org/scripts/556804/Google%20AI%20Studio%20%E6%B1%89%E5%8C%96%E8%84%9A%E6%9C%AC%28%E8%88%B9%E4%BB%93%E5%AE%8C%E7%BE%8E%E7%89%88%29.user.js
+// @updateURL https://update.greasyfork.org/scripts/556804/Google%20AI%20Studio%20%E6%B1%89%E5%8C%96%E8%84%9A%E6%9C%AC%28%E8%88%B9%E4%BB%93%E5%AE%8C%E7%BE%8E%E7%89%88%29.meta.js
 // ==/UserScript==
 
 (function () {
@@ -24,36 +26,6 @@
     // 翻译映射表 (英文 -> 中文)
     const translations = {
         // --- 应用界面新增 ---
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
         "Switching to this model will start a new chat. Content in current chat will be lost. Do you want to continue?": "切换模型后将开启新对话，当前对话内容将会丢失！！是否继续？",
         "Switch model?": "切换模型？",
         "Our legacy Flash model, providing baseline speed and intelligence.": "我们上一代的 Flash 模型，提供基础的速度与智能水平。",
